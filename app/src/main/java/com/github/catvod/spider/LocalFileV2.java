@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Environment;
 
 import com.github.catvod.crawler.Spider;
-import com.github.catvod.utils.Utils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -25,8 +24,8 @@ import java.util.List;
  */
 public class LocalFileV2 extends Spider {
 
-    private final String defaultMediaPic = "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider/pic/video.png@User-Agent=" + Utils.CHROME;
-    private final String defaultFolderPic = "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider/pic/folder.png@User-Agent=" + Utils.CHROME;
+    private final String defaultFolderPic = "https://img.tukuppt.com/png_preview/00/18/23/GBmBU6fHo7.jpg!/fw/260";
+    private final String defaultMediaPic = "https://img.tukuppt.com/png_preview/00/42/50/3ySGW7mvyY.jpg!/fw/260";
 
     private boolean showAllFile = true;
     private final List<String> media = Arrays.asList("mp4", "mkv", "wmv", "flv", "avi", "mp3", "aac", "flac", "m4a", "ape", "ogg", "rmvb", "ts");

@@ -15,7 +15,7 @@
 
 
 ### 4.配置接口
-> FongMi的影视APP / TVBox 配置加速地址1: https://ghproxy.net/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/json/config.json
+> FongMi的影视APP / TVBox 配置加速地址1: https://ghproxy.net/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/config.json
 >
 >
 

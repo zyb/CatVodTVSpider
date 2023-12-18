@@ -1,11 +1,11 @@
 {
-  "spider": "https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/jar/custom_spider.jar;md5;7d46a0f0e7f1b4c87e54db11ed42b989",
+  "spider": "https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/jar/custom_spider.jar;md5;4a6fb331feaae77c39fff5b9e80e8a12",
   
   "lives": [
     {
       "name": "范明明",
       "type": 0,
-      "url": "https://cdn.jsdelivr.net/gh/fanmingming/live/tv/m3u/global.m3u",
+      "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/v6.m3u",
       "playerType": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "ua": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/110.0.0.0Safari/537.36"
@@ -34,7 +34,7 @@
       "changeable": 0,
       "ext": "https://www.agit.ai/fantaiying/dr_py/raw/branch/main/js/荐片.js"
     },
-    {"key": "Douban", "name": "豆瓣", "type": 3, "api": "csp_Douban", "searchable": 0, "ext": "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider/other/json/douban.json"},
+    {"key": "Douban", "name": "豆瓣", "type": 3, "api": "csp_Douban", "searchable": 0, "ext": "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider@main/other/json/douban.json"},
     {"key": "Xb6v", "name": "新版6V电影网(磁力)", "type": 3, "api": "csp_Xb6v", "searchable": 1, "changeable": 0},
     //{"key": "SixV", "name": "6V电影网(磁力)", "type": 3, "api": "csp_SixV", "searchable": 1, "ext": "https://www.6vdy.org/", "changeable": 0},
     {"key": "PiaoHua", "name": "新飘花电影网(磁力)", "type": 3, "api": "csp_PiaoHua", "searchable": 1, "changeable": 0},
@@ -49,7 +49,7 @@
       "type": 3,
       "api": "csp_Live2Vod",
       "searchable": 0,
-      "ext": "南风$https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt#饭太硬$https://agit.ai/fantaiying/fty/raw/branch/master/live.txt#影视范$https://agit.ai/fantaiying/fmm/raw/branch/main/tv/m3u/global.m3u&&&https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider/other/pic/live.png"
+      "ext": "南风$https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt#饭太硬$https://agit.ai/fantaiying/fty/raw/branch/master/live.txt&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png"
       , "changeable": 0
     },
     {
@@ -58,7 +58,7 @@
       "type": 3,
       "api": "csp_Live2Vod",
       "searchable": 0,
-      "ext": "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider/other/json/live.json"
+      "ext": "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider@main/other/json/live.json"
       , "changeable": 0
     },
     {"key": "Yj1211", "name": "直播综合", "type": 3, "api": "csp_Yj1211", "searchable": 1, "changeable": 0},

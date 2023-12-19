@@ -10,7 +10,9 @@ import org.json.JSONObject;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -54,32 +56,58 @@ public class LocalFileV2 extends Spider {
             List<String> exclude = Arrays.asList("emulated", "sdcard", "self");
             for (File file : files) {
                 if (exclude.contains(file.getName())) continue;
-                JSONObject obj = new JSONObject()
-                        .put("type_id", file.getAbsolutePath())
-                        .put("type_name", file.getName())
-                        .put("type_flag", "1");
+                JSONObject obj = new JSONObject();
+                obj.put("type_id", file.getAbsolutePath());
+                obj.put("type_name", file.getName());
+                obj.put("type_flag", "1");
                 classes.put(obj);
             }
         }
         // 补充 支持外部存储路径 end
 
-        JSONArray jSONArray3 = new JSONArray();
-
-        JSONObject jSONObject4 = new JSONObject();
-        jSONObject4.put("class", classes);
+        JSONObject result = new JSONObject();
+        result.put("class", classes);
         if (filter) {
-            jSONObject4.put("filters", new JSONObject("{}"));
+            result.put("filters", new JSONObject("{}"));
         }
-        return jSONObject4.toString();
+        return result.toString();
     }
 
     @Override
     public String categoryContent(String tid, String pg, boolean filter, HashMap<String, String> extend) throws Exception {
-        File file = new File(tid);
-        File[] list = file.listFiles();
-        Arrays.sort(list);
-        JSONArray jSONArray2 = new JSONArray();
-        for (File f : list) {
+        File folder = new File(tid);
+        File[] files = folder.listFiles();
+
+        List<File> folderList = new ArrayList<>();
+        List<File> fileList = new ArrayList<>();
+
+        // 将文件夹和文件分别放入不同的集合
+        for (File file : files) {
+            if (file.isDirectory()) {
+                folderList.add(file);
+            } else {
+                fileList.add(file);
+            }
+        }
+
+        // 对文件夹和文件集合进行按照文件名字母排序
+        Collections.sort(folderList, (f1, f2) -> f1.getName().compareTo(f2.getName()));
+        Collections.sort(fileList, (f1, f2) -> f1.getName().compareTo(f2.getName()));
+
+        // 将排好序的文件夹和文件放入一个新的文件数组
+        File[] sortedFiles = new File[folderList.size() + fileList.size()];
+        int index = 0;
+        for (File file : folderList) {
+            sortedFiles[index] = file;
+            index++;
+        }
+        for (File file : fileList) {
+            sortedFiles[index] = file;
+            index++;
+        }
+
+        JSONArray list = new JSONArray();
+        for (File f : sortedFiles) {
             String filename = f.getName();
             if (!showAllFile && filename.indexOf('.') == 0) continue; // 过滤掉隐藏文件、隐藏文件夹
             //String pic = "https://img.tukuppt.com/png_preview/00/18/23/GBmBU6fHo7.jpg!/fw/260";
@@ -88,23 +116,23 @@ public class LocalFileV2 extends Spider {
                 //pic = "https://img.tukuppt.com/png_preview/00/42/50/3ySGW7mvyY.jpg!/fw/260";
                 pic = defaultMediaPic;
             }
-            JSONObject jSONObject2 = new JSONObject();
-            jSONObject2.put("vod_id", f.getAbsolutePath());
-            jSONObject2.put("vod_name", f.getName());
-            jSONObject2.put("vod_pic", pic);
+            JSONObject vod = new JSONObject();
+            vod.put("vod_id", f.getAbsolutePath());
+            vod.put("vod_name", f.getName());
+            vod.put("vod_pic", pic);
             // 当 vod_tag 为 folder 时会点击该 item 会把当前 vod_id 当成新的类型 ID 重新进
-            jSONObject2.put("vod_tag", f.isDirectory() ? "folder" : "file");
-            jSONObject2.put("vod_remarks", fileTime(f.lastModified(), "yyyy/MM/dd aHH:mm:ss"));
-            jSONArray2.put(jSONObject2);
+            vod.put("vod_tag", f.isDirectory() ? "folder" : "file");
+            vod.put("vod_remarks", fileTime(f.lastModified(), "yyyy/MM/dd aHH:mm:ss"));
+            list.put(vod);
         }
 
-        JSONObject jSONObject3 = new JSONObject();
-        jSONObject3.put("page", 1);
-        jSONObject3.put("pagecount", 1);
-        jSONObject3.put("limit", jSONArray2.length());
-        jSONObject3.put("total", jSONArray2.length());
-        jSONObject3.put("list", jSONArray2);
-        return jSONObject3.toString();
+        JSONObject result = new JSONObject();
+        result.put("page", 1);
+        result.put("pagecount", 1);
+        result.put("limit", list.length());
+        result.put("total", list.length());
+        result.put("list", list);
+        return result.toString();
     }
 
     private String fileTime(long time, String fmt) {

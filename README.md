@@ -9,15 +9,17 @@
 - 初次接触的话建议查看原来的 [README.md](./README(原).md)，里面有关于一些参数说明。
 
 ### 2.编写spider说明：
-
+> 当前项目的dev分支无需启动虚拟机即可调试相关的内容(缺点是无法编写和调试与Android系统相关的内容，如果需要编写和调试与Android系统相关的内容，那么就需要用当前项目的main分支)，dev分支里面 /app/src/main/java/com/github/catvod/demo 下有多个测试的例子，给对应的 spider 类调试时，多打几个断点，仔细观察各个变量里面存储的是什么值就明白各个变量的作用了。
 
 ### 3.编译和构建 jar：
+> 当调试好spider类后，可以将对应包下面的代码拷贝至main分支对应的包下，然后执行 buildAndGenJar.bat，即可构建jar，如果你是macOS / Linux 系统，那么可以利用 GitHub 的 Actions 去构建，当前项目的 Actions 里面有 【Spider Jar Gen CI】、【Spider构建】，建议使用 【Spider构建】，这个构建好 jar 后，存在 action 的 Artifacts 里，不会将jar直接提交到当前项目的 jar 目录下。在执行完毕的 action 里面的 Artifacts 可以找到和下载打包好的 Spider.zip ，解压后即可得到 jar
 
 
 ### 4.配置接口
-> FongMi的影视APP / TVBox 配置加速地址1: https://ghproxy.net/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/config.json
+> FongMi的影视APP / TVBox 配置加速地址1: https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider@main/config.json
 >
 >
+> FongMi的影视APP / TVBox 配置加速地址2: https://hub.gitmirror.com/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/config.json
 
 
 

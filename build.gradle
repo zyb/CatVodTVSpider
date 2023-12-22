@@ -11,7 +11,6 @@ buildscript {
         jsoup_version = "1.14.1"
         jsoupxpath_version = "2.5.0"
         okhttp_version = "3.12.13"
-        rxhttp_version = "2.6.5"
     }
 
     repositories {

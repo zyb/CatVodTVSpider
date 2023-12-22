@@ -34,11 +34,12 @@ public class PushAgent extends Spider {
             case "直连":
                 result.put("parse", 0);
                 break;
+            case "嗅探":
+                result.put("parse", 1);
+                break;
             case "解析":
                 result.put("parse", 1).put("jx", "1");
                 break;
-            default: // 默认是嗅探
-                result.put("parse", 1);
         }
         result.put("playUrl", "");
         result.put("url", id);

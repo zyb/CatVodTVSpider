@@ -91,8 +91,8 @@ public class LocalFileV2 extends Spider {
         }
 
         // 对文件夹和文件集合进行按照文件名字母排序
-        Collections.sort(folderList, (f1, f2) -> f1.getName().compareTo(f2.getName()));
-        Collections.sort(fileList, (f1, f2) -> f1.getName().compareTo(f2.getName()));
+        Collections.sort(folderList, (f1, f2) -> f1.getName().toLowerCase().compareTo(f2.getName().toLowerCase()));
+        Collections.sort(fileList, (f1, f2) -> f1.getName().toLowerCase().compareTo(f2.getName().toLowerCase()));
 
         // 将排好序的文件夹和文件放入一个新的文件数组
         File[] sortedFiles = new File[folderList.size() + fileList.size()];

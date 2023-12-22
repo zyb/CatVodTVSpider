@@ -30,8 +30,6 @@
 -keep class com.google.**{*;}
 -dontwarn com.android.**
 -keep class com.android.**{*;}
--dontwarn rxhttp.**
--keep class rxhttp.**{*;}
 -dontwarn kotlin.**
 -keep class kotlin.**{*;}
 -dontwarn kotlinx.**

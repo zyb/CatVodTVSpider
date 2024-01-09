@@ -1,29 +1,29 @@
 [
   {
     "name": "范明明(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png",
+    "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
     "group": 1
   },
   {
     "name": "YueChan(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png",
+    "url": "https://cdn.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
     "group": 1
   },
   {
     "name": "俊哥",
-    "url": "http://home.jundie.top:81/Cat/tv/live.txt&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png"
+    "url": "http://home.jundie.top:81/Cat/tv/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
   },
   {
     "name": "饭太硬",
-    "url": "https://agit.ai/fantaiying/0/raw/branch/main/tvlive.txt&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png"
+    "url": "https://agit.ai/fantaiying/0/raw/branch/main/tvlive.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
   },
   {
     "name": "南风",
-    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png"
+    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
   },
   {
     "name": "南风(分线路)",
-    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/other/pic/live.png",
+    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
     "circuit": 1
   }
 ]

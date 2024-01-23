@@ -35,6 +35,7 @@ public class OkHttpUtil {
                         .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                         .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                         .retryOnConnectionFailure(true)
+                        .hostnameVerifier((hostName, sslSession) -> true)
                         .sslSocketFactory(new SSLSocketFactoryCompat(SSLSocketFactoryCompat.trustAllCert), SSLSocketFactoryCompat.trustAllCert);
                 defaultClient = builder.build();
             }
@@ -52,6 +53,7 @@ public class OkHttpUtil {
                         .followRedirects(false)
                         .followSslRedirects(false)
                         .retryOnConnectionFailure(true)
+                        .hostnameVerifier((hostName, sslSession) -> true)
                         .sslSocketFactory(new SSLSocketFactoryCompat(SSLSocketFactoryCompat.trustAllCert), SSLSocketFactoryCompat.trustAllCert);
                 noRedirectClient = builder.build();
             }

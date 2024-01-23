@@ -7,7 +7,6 @@ import com.github.catvod.bean.Result;
 import com.github.catvod.bean.Vod;
 import com.github.catvod.crawler.Spider;
 import com.github.catvod.net.OkHttp;
-import com.github.catvod.utils.Util;
 import com.google.gson.JsonParser;
 
 import org.json.JSONArray;
@@ -134,9 +133,21 @@ public class Douban extends Spider {
         try {
             StringBuilder tags = new StringBuilder();
             for (String key : extend.keySet()) if (!key.equals("sort")) tags.append(extend.get(key)).append(",");
-            return Util.substring(tags.toString());
+            return substring(tags.toString());
         } catch (Exception e) {
             return "";
+        }
+    }
+
+    public static String substring(String text) {
+        return substring(text, 1);
+    }
+
+    public static String substring(String text, int num) {
+        if (text != null && text.length() > num) {
+            return text.substring(0, text.length() - num);
+        } else {
+            return text;
         }
     }
 }

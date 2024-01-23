@@ -5,7 +5,7 @@ buildscript {
         appVersionName = "1.0.0"
 
         miniSdkVersion = 16
-        compileSdkVersion = 30
+        compileSdkVersion = 34
         targetSdkVersion = 26
 
         jsoup_version = "1.14.1"

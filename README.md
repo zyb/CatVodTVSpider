@@ -2,9 +2,9 @@
 
 ### 1.基于这些开源的项目。
 >  [CatVodTVSpider项目](https://github.com/CatVodTVOfficial/CatVodTVSpider)
-、 [TvJar-1项目](https://github.com/q215613905/TvJar-1)、[tvjar_test](https://github.com/asters1/tvjar_test)、[CatVodSpider](https://github.com/FongMi/CatVodSpider)
+、 [TvJar-1项目](https://github.com/q215613905/TvJar-1)、[tvjar_test](https://github.com/asters1/tvjar_test)、[CatVodSpider](https://github.com/FongMi/CatVodSpider)、[TvJar](https://github.com/takagen99/TvJar)
 
-- 在此感谢这些开源项目，感谢 CatVodTVOfficial、q215613905、asters1、FongMi
+- 在此感谢这些开源项目，感谢 CatVodTVOfficial、q215613905、asters1、FongMi、takagen99
 
 - 初次接触的话建议查看原来的 [README.md](./README(原).md)，里面有关于一些参数说明。
 
@@ -30,7 +30,7 @@
 > 
 > 俊版仓库地址：https://github.com/q215613905/TVBoxOS
 > 
->takagen99版仓库地址 https://github.com/takagen99/Box
+> takagen99版仓库地址 https://github.com/takagen99/Box
 
 ### 6.关于直播(爬虫版)使用说明
 

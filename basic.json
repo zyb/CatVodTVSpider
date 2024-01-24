@@ -1,5 +1,5 @@
 {
-    "spider": "./jar/basic.jar;md5;425be7f574605e47762e3f1d08411950",
+    "spider": "./jar/basic.jar;md5;0463fd2ab149d9900a0d0f736d1dc625",
   
     "wallpaper": "https://bing.img.run/rand.php",
 
@@ -80,6 +80,16 @@
     ],
     "parses": [
       {
+        "name": "JSON聚合",
+        "type": 3,
+        "url": "Demo"
+      },
+      {
+        "name": "Web聚合",
+        "type": 3,
+        "url": "Web"
+      },
+      {
         "name": "综合",
         "type": 0,
         "url": "https://jx.jsonplayer.com/player/?url="
@@ -88,11 +98,6 @@
         "name": "虾米",
         "type": 0,
         "url": "https://jx.xmflv.com/?url="
-      },
-      {
-        "name": "Json聚合",
-        "type": 3,
-        "url": "Demo"
       },
       {
         "name": "Json并发",

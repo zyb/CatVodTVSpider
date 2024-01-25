@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.github.catvod.crawler.Spider;
-import com.github.catvod.net.OkHttp;
+import com.github.catvod.utils.okhttp.OkHttpUtil;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -198,7 +198,7 @@ public class SP360 extends Spider {
                 .addHeader("User-Agent", userAgent)
                 .addHeader("Referer", referer)
                 .build();
-        OkHttpClient okHttpClient = OkHttp.client();
+        OkHttpClient okHttpClient = OkHttpUtil.defaultClient();
         Response response = okHttpClient.newCall(request).execute();
         if (response.body() == null) return "";
         String str = response.body().string();

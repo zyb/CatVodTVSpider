@@ -2,12 +2,18 @@ package com.github.catvod.spider;
 
 import android.text.TextUtils;
 import com.github.catvod.crawler.Spider;
-import com.github.catvod.net.OkHttp;
+import com.github.catvod.utils.okhttp.OkHttpUtil;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.net.URLEncoder;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Yj1211 extends Spider {
 
@@ -22,7 +28,7 @@ public class Yj1211 extends Spider {
         String srcURL = "http://live.yj1211.work/api/live/getRecommend?page=1&size=20";
         String srcOriginStr = "";
         for (int i = 0; i < 3; i++) {
-            srcOriginStr = OkHttp.string(srcURL, getHeader());
+            srcOriginStr = OkHttpUtil.string(srcURL, getHeader());
             if (srcOriginStr.length() > 0) {
                 break;
             } else {
@@ -46,7 +52,7 @@ public class Yj1211 extends Spider {
         String geta = "http://live.yj1211.work/api/live/getAllAreas";
         String aaid = "";
         for (int i = 0; i < 3; i++) {
-            aaid = OkHttp.string(geta, getHeader());
+            aaid = OkHttpUtil.string(geta, getHeader());
             if (aaid.length() > 0) {
                 break;
             } else {
@@ -158,7 +164,7 @@ public class Yj1211 extends Spider {
         }
         String srcOrignstr = "";
         for (int i = 0; i < 3; i++) {
-            srcOrignstr = OkHttp.string(srcurl, getHeader());
+            srcOrignstr = OkHttpUtil.string(srcurl, getHeader());
             if (srcOrignstr.length() > 0) {
                 break;
             } else {
@@ -201,7 +207,7 @@ public class Yj1211 extends Spider {
         String roomId = info[1];
         String srcURL = "http://live.yj1211.work/api/live/getRoomInfo?platform=" + platform + "&roomId=" + roomId;
         String srcPlayURL = "http://live.yj1211.work/api/live/getRealUrl?platform=" + platform + "&roomId=" + roomId;
-        JSONObject data = new JSONObject(OkHttp.string(srcURL, getHeader()))
+        JSONObject data = new JSONObject(OkHttpUtil.string(srcURL, getHeader()))
                 .getJSONObject("data");
         String name = data.getString("roomName");
         String pic = data.getString("roomPic");
@@ -225,7 +231,7 @@ public class Yj1211 extends Spider {
         List<String> vodItems = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             String[] qq = new String[]{"OD", "HD", "SD", "LD", "FD"};
-            String qa = new JSONObject(OkHttp.string(srcPlayURL, getHeader()))
+            String qa = new JSONObject(OkHttpUtil.string(srcPlayURL, getHeader()))
                     .getJSONObject("data")
                     .optString(qq[i]);
             if (qa.isEmpty()) {
@@ -285,7 +291,7 @@ public class Yj1211 extends Spider {
         String url = "http://live.yj1211.work/api/live/search?platform=all&keyWords=" + URLEncoder.encode(key) + "&isLive=0";
         String searchResult = "";
         for (int i = 0; i < 3; i++) {
-            searchResult = OkHttp.string(url, getHeader());
+            searchResult = OkHttpUtil.string(url, getHeader());
             if (searchResult.length() > 0) {
                 break;
             } else {

@@ -1,11 +1,11 @@
 {
-  "spider": "https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/jar/custom_spider.jar;md5;dff364e0e3b3aa3eec4f00aaa82c4c4c",
+  "spider": "https://gh.isteed.cc/https://raw.githubusercontent.com/zhixc/CatVodTVSpider/main/jar/custom_spider.jar;md5;25af7d3e650c6842ddd57c81713854d4",
 
   "wallpaper": "https://bing.img.run/rand.php",
 
   "lives": [
     {
-      "name": "范明明",
+      "name": "范明明IPV6",
       "type": 0,
       "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u",
       "playerType": 1,
@@ -46,15 +46,14 @@
       "ext": "https://cdn.jsdelivr.net/gh/zhixc/CatVodTVSpider@main/other/json/douban.json"
     },
     {
-      "key": "Xb6v",
-      "name": "新版6V电影网(磁力)",
+      "key": "SixV",
+      "name": "6V电影网(磁力)",
       "type": 3,
-      "api": "csp_Xb6v",
+      "api": "csp_SixV",
       "searchable": 1,
-      "playerType": 1,
+      "ext": "https://www.6vdy.org/",
       "changeable": 0
     },
-    //{"key": "SixV", "name": "6V电影网(磁力)", "type": 3, "api": "csp_SixV", "searchable": 1, "ext": "https://www.6vdy.org/", "changeable": 0},
     {
       "key": "PiaoHua",
       "name": "新飘花电影网(磁力)",

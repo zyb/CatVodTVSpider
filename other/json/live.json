@@ -1,29 +1,29 @@
 [
   {
     "name": "范明明(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
+    "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
     "group": 1
   },
   {
     "name": "YueChan(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
+    "url": "https://cdn.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
     "group": 1
   },
   {
     "name": "俊哥",
-    "url": "http://home.jundie.top:81/Cat/tv/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
+    "url": "http://home.jundie.top:81/Cat/tv/live.txt&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png"
   },
   {
     "name": "饭太硬",
-    "url": "https://agit.ai/fantaiying/0/raw/branch/main/tvlive.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
+    "url": "https://agit.ai/fantaiying/0/raw/branch/main/tvlive.txt&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png"
   },
   {
     "name": "南风",
-    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png"
+    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png"
   },
   {
     "name": "南风(分线路)",
-    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://cdn.jsdelivr.net/gh/zhixc/cloud189-action/live.png",
+    "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
     "circuit": 1
   }
 ]

@@ -1,12 +1,12 @@
 [
   {
     "name": "范明明(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/fanmingming/live@main/tv/m3u/ipv6.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
+    "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
     "group": 1
   },
   {
     "name": "YueChan(分组)",
-    "url": "https://cdn.jsdelivr.net/gh/YueChan/Live@main/IPTV.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
+    "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/YueChan/live/main/IPTV.m3u&&&https://img1.dd.ci/file/08b8a048adf5d333c6030.png",
     "group": 1
   },
   {

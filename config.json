@@ -1,5 +1,5 @@
 {
-  "spider": "。/jar/custom_spider.jar;md5;6d234392eebd46fb59527ff954909b80",
+  "spider": "./jar/custom_spider.jar;md5;c3fd9628b9aaddd6e486a5e9be8a944e",
 
   "lives": [
     {
@@ -24,7 +24,7 @@
   "sites": [
     {"key":"csp_SixV","name":"磁力 | 新6V电影网","type":3,"api":"csp_SixV","searchable":1,"playerType":1,"timeout":120},
     {"key":"csp_DyGang","name":"磁力 | 电影港","type":3,"api":"csp_DyGang","searchable":1,"playerType":1,"timeout":120},
-    {"key":"csp_Xunlei8","name":"磁力 | 迅雷吧","type":3,"api":"csp_Xunlei8","searchable":1,"playerType":1,"timeout":120},
+    {"key":"csp_Xunlei8","name":"磁力 | 迅雷吧","type":3,"api":"csp_Xunlei8","searchable":1,"playerType":1,"timeout":120,"changeable":0},
     {"key":"PiaoHua","name":"磁力 | 新飘花电影网","type":3,"api":"csp_PiaoHua","searchable":1,"playerType":1,"timeout":120},
     {"key":"Douban","name":"搜索 | 豆瓣","type":3,"api":"csp_Douban","ext":"./other/json/douban.json","searchable":0},
     {"key":"本地","name":"本地文件","type":3,"api":"csp_LocalFileV2","searchable":0,"playerType":1},

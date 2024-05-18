@@ -3,8 +3,7 @@ package com.github.catvod.spider;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.github.catvod.crawler.Spider;
-//import com.github.catvod.net.OkHttp;
+import com.github.catvod.utils.m3u8.AdFilter;
 import com.github.catvod.utils.okhttp.OkHttpUtil;
 
 import org.json.JSONArray;
@@ -15,7 +14,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.net.URLEncoder;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -29,7 +27,7 @@ import java.util.regex.Pattern;
  * @author zhixc
  * Vodflix
  */
-public class Voflix extends Spider {
+public class Voflix extends AdFilter {
 
     private String siteUrl;
     private final String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36";
@@ -105,10 +103,13 @@ public class Voflix extends Spider {
      */
     @Override
     public void init(Context context, String extend) throws Exception {
-        super.init(context, extend);
         // 域名经常性发生变化，通过外部配置文件传入，可以方便修改
-        if (extend.endsWith("/")) extend = extend.substring(0, extend.lastIndexOf("/"));
-        siteUrl = extend;
+        // "siteUrl=https://www.voflix.vip$$$rulesUrl=https://fastly.jsdelivr.net/gh/zhixc/CatVodTVSpider@main/other/json/rules.json"
+        String[] split = extend.split("\\$\\$\\$");
+        String url = split[0].split("=")[1];
+        if (url.endsWith("/")) siteUrl = url.substring(0, url.lastIndexOf("/"));
+        else siteUrl = url;
+        super.init(context, split[1].split("=")[1]);
     }
 
     /**
@@ -216,7 +217,8 @@ public class Voflix extends Spider {
         Map<String, String> playMap = new LinkedHashMap<>();
         for (int i = 0; i < sourceList.size(); i++) {
             String spanText = circuits.get(i).select("span").text();
-            if (spanText.contains("境外") || spanText.contains("网盘") || spanText.contains("暴风")) continue;
+            if (spanText.contains("境外") || spanText.contains("网盘") ) continue;
+            //if (spanText.contains("暴风")) continue;
             String smallText = circuits.get(i).select("small").text();
             String circuitName = spanText + "【共" + smallText + "集】";
             List<String> vodItems = new ArrayList<>();
@@ -289,7 +291,7 @@ public class Voflix extends Spider {
             result.put("parse", 0);
             result.put("header", getHeader().toString());
             result.put("playUrl", "");
-            result.put("url", realPlayUrl);
+            result.put("url", proxyM3U8(realPlayUrl));
             return result.toString();
         }
         return "";

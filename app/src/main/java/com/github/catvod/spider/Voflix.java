@@ -4,7 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 
 import com.github.catvod.utils.m3u8.AdFilter;
-import com.github.catvod.utils.okhttp.OkHttpUtil;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -20,7 +19,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -28,53 +26,10 @@ import java.util.regex.Pattern;
  * Vodflix
  */
 public class Voflix extends AdFilter {
-
     private String siteUrl;
-    private final String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36";
-
-    private String req(String url, Map<String, String> header) {
-//        return OkHttp.string(url, header);
-        return OkHttpUtil.string(url, header);
-    }
-
-    private Map<String, String> getHeader() {
-        Map<String, String> header = new HashMap<>();
-        header.put("User-Agent", userAgent);
-        header.put("Referer", siteUrl + "/");
-        return header;
-    }
-
-    /**
-     * 正则获取字符串
-     *
-     * @param regex 正则表达式字符串
-     * @param html  网页源码
-     * @return 返回正则获取的字符串结果
-     */
-    private String find(String regex, String html) {
-        Pattern p = Pattern.compile(regex, Pattern.DOTALL | Pattern.CASE_INSENSITIVE);
-        Matcher m = p.matcher(html);
-        return m.find() ? m.group(1) : "";
-    }
-
-    /**
-     * 正则获取字符串
-     *
-     * @param pattern 正则表达式 pattern 对象
-     * @param html    网页源码
-     * @return 返回正则获取的字符串结果
-     */
-    private String find(Pattern pattern, String html) {
-        Matcher m = pattern.matcher(html);
-        return m.find() ? m.group(1) : "";
-    }
 
     private String clean(String str) {
         return removeHtmlTag(str).replace("\n", "").replace("\t", "").trim();
-    }
-
-    private String removeHtmlTag(String str) {
-        return str.replaceAll("</?[^>]+>", "");
     }
 
     private JSONArray parseVodList(Elements items) throws Exception {

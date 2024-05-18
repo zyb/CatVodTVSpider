@@ -5,34 +5,18 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 import com.github.catvod.bean.Rule;
-import com.github.catvod.crawler.Spider;
 import com.github.catvod.spider.Proxy;
-import com.github.catvod.utils.okhttp.OkHttpUtil;
+import com.github.catvod.spider.base.BaseSpider;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class AdFilter extends Spider {
+public class AdFilter extends BaseSpider {
     public static List<Rule> rules = new ArrayList<>();
-
-    private static final String userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:102.0) Gecko/20100101 Firefox/102.0";
-
-    private Map<String, String> getHeader() {
-        Map<String, String> header = new HashMap<>();
-        header.put("User-Agent", userAgent);
-        return header;
-    }
-
-    private String req(String url, Map<String, String> header) {
-        //return OkHttp.string(url, header);
-        return OkHttpUtil.string(url, header);
-    }
 
     @Override
     public void init(Context context, String extend) throws Exception {

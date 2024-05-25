@@ -3,6 +3,15 @@
 
   "lives": [
     {
+      "name": "BigBigGrandG",
+      "type": 0,
+      "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/BigBigGrandG/IPTV-URL/release/Gather.m3u",
+      "player删Type除": 1,
+      "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png",
+      "ua": "Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/110.0.0.0Safari/537.36"
+    },
+    {
       "name": "范明明IPV6",
       "type": 0,
       "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u",

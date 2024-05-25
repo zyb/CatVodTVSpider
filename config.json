@@ -5,7 +5,7 @@
     {
       "name": "范明明IPV6",
       "type": 0,
-      "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/cqyx.m3u",
+      "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPTV.m3u",
       "player删Type除": 1,
       "epg": "http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png",
